@@ -196,6 +196,30 @@
   <option value="audi" selected>Audi</option>
 </select>
 
+<hr>
+
+<!-- 여러 줄 입력 -->
+<p>
+  <label for="multi">여러 줄 텍스트 입력</label>
+</p>
+<textarea id="multi" cols="30" rows="6"></textarea> <!-- cols: 열 | rows: 행 (글자 수) -->
+<br>
+<textarea id="multi" cols="30" rows="6" spellcheck="false"></textarea> <!-- 맞춤법 교정 X -->
+<br>
+<textarea id="multi" cols="30" rows="6" style="resize: none;"></textarea> <!-- 텍스트 박스 사이즈 조정 X -->
+
+<hr>
+
+<!-- (참고) form: 사용자가 입력한 내용을 어떤 서버 경로로, 어떤 방식(get, post)으로 전달할지 설정 -->
+
+<form action="/login" method="get">
+<!-- name 속성: 서버로 전달될 때 유니크하게 구분하기 위한 이름 -->
+<input type="text" name="id">
+<input type="password" name="pw">
+<button type="submit">로그인</button>
+</form> <!-- 반드시 form 태그 안에 input을 넣을 것 -->
+
+
 
 </body>
 </html>
