@@ -12,7 +12,7 @@
 
     /* class를 의미하는 . */
     .green {
-      color: green;
+      color: darkcyan;
     }
 
     /* id를 의미하는 # */
@@ -47,9 +47,28 @@
 
   <br><br>
 
-  <!-- id: 요서를 지칭하는 "고유한" 이름(하나의 웹 문서 내에 1개만 존재) -->
+  <!-- id: 요소를 지칭하는 "고유한" 이름(하나의 웹 문서 내에 1개만 존재) -->
   <!-- class보다는 사용 빈도가 낮음(특히 react에서는 사용 안 함) -->
-  <span id="abc">동해물</span>과 <span class="green">백두산</span>이 마르고 닳도록
-  하느님이 보우하사 <span class="green">우리나라</span> 만세
+  <span id="abc">동해물</span>과 <span class="darkcyan">백두산</span>이 마르고 닳도록
+  하느님이 보우하사 <span class="darkcyan">우리나라</span> 만세
+
+  <br><br>
+
+  <!-- data-: 요소에 데이터를 저장하는 용도(사용자 정의 속성을 만듦) -->
+  <!-- JS에서 이 속성에 저장한 데이터를 꺼내서 이용 가능 -->
+  <!-- 사용법: data-내가 원하는 이름 작명(카멜케이스)="데이터" -->
+  <div data-dessert="cake">케익</div>
+  <div data-Dessert="candy">사탕</div>
+
+  <script>
+    // div 태그를 모두 찾아서 elements(작명)라는 이름의 저장 공간(변수)에 담아라
+    const elements = document.querySelectorAll('div');
+    console.log(elements);
+    // 찾은 요소들을 하나씩 반복해 가면서 el에 다시 담고
+    elements.forEach(el => {
+      // el 안에 dataset 안에 작명한 이름으로 접근
+      console.log(el.dataset.dessert);
+    });
+  </script>
 </body>
 </html>
