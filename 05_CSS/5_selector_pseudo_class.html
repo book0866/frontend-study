@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>selector</title>
+
+  <style>
+    /* 1. (어떠한 행동을 했을 때 동작하는) 가상 클래스 선택자 */
+    /* :hover (마우스 커서가 올라가 있는 동안 선택) */
+    a:hover {
+      color: coral;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: cornflowerblue;
+      transition: 0.2s; /* 전환 효과(추후 배움) */
+    }
+
+    .box:hover {
+      width: 200px;
+      background-color: crimson;
+    }
+
+    /* :active (마우스를 클릭하고 있는 동안 선택) */
+    a:active {
+      color: fuchsia;
+    }
+
+    .box:active {
+      width: 200px;
+      background-color: blueviolet;
+    }
+
+    /* :focus (요소가 포커스(활성화)되면 선택) */
+    /* HTML 대화형(상호작용) 요소에 사용 가능
+       예: input, a, button, label, select, textarea 등 */
+    /* 구글 검색: HTML 대화형 콘텐츠 mdn */
+    input:focus {
+      background-color: deeppink;
+    }
+
+    /* 2. (특정한 요소를 선택하는) 가상 클래스 선택자 */
+    /* :first-child (첫 번째 자식 요소)
+       :last-child (마지막 자식 요소) */
+    .tea span:first-child {
+      color: burlywood;
+    }
+    
+    /* div가 세 번째 자식이어서 선택 안 됨 */
+    /* .tea div:first-child {
+      color: burlywood;
+    } */
+
+    .tea h3:last-child {
+      color: darkorchid;
+    }
+
+    /* :nth-child(n) (n번째 자식 요소) */
+    .tea *:nth-child(2) {
+      color: green;
+    }
+
+    .tea *:nth-child(2n+1) {
+      color: chocolate;
+    }
+
+  </style>
+</head>
+<body>
+  <a href="https://www.naver.com">★☆NAVER☆★</a>
+
+  <div class="box"></div>
+
+  <hr>
+
+  <input type="text">
+
+  <hr>
+
+  <div class="tea">
+    <span>현미차</span>
+    <span>녹차</span>
+    <div>옥수수염차</div>
+    <p>홍차</p>
+    <h3>콤부차</h3>
+  </div>
+
+</body>
+</html>
