@@ -45,26 +45,45 @@
     /* 2. (특정한 요소를 선택하는) 가상 클래스 선택자 */
     /* :first-child (첫 번째 자식 요소)
        :last-child (마지막 자식 요소) */
-    .tea span:first-child {
+    /* .tea span:first-child {
       color: burlywood;
-    }
+    } */
     
     /* div가 세 번째 자식이어서 선택 안 됨 */
     /* .tea div:first-child {
       color: burlywood;
     } */
 
-    .tea h3:last-child {
+    /* .tea h3:last-child {
       color: darkorchid;
-    }
+    } */
 
     /* :nth-child(n) (n번째 자식 요소) */
-    .tea *:nth-child(2) {
+    /* .tea *:nth-child(2) {
       color: green;
-    }
-
-    .tea *:nth-child(2n+1) {
+    } */
+   
+    /* .tea *:nth-child(even) {
       color: chocolate;
+    } */
+
+    /* .tea *:nth-child(2n+1) {
+      color: chocolate;
+    } */
+
+    /* .tea *:nth-child(odd) {
+      color: rgb(10, 165, 36);
+    } */
+
+    /* Quiz: 자식들 중 앞에 3개만 선택 */
+    /* n이 앞에 나와야 동작 */
+    /* .tea *:nth-child(-n+3) {
+        color: blueviolet;
+    } */
+
+    /* :not(s) (선택자 s를 제외) */
+    .tea *:not(span, p) {
+      color: chartreuse;
     }
 
   </style>

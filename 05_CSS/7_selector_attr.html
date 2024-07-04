@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>selector</title>
+
+  <style>
+    /* 속성 선택자: HTML의 속성과 값으로 요소 선택. [] 기호 사용 */
+    [disabled] {
+      color: antiquewhite;
+      background-color: brown;
+    }
+
+    [type="password"] {
+      color: blue;
+      background-color: aqua;
+    }
+
+    [value="Key"] {
+      color: chocolate;
+      background-color: goldenrod;
+    }
+
+    [data-tea-name="greentea"] {
+      color: olivedrab;
+    }
+
+    [data-tea-name="corn"] {
+      color: chocolate;
+    }
+
+  </style>
+</head>
+<body>
+  <input type="text" value="Key">
+  <input type="password">
+  <input type="text" value="HOUSE" disabled>
+  <span data-tea-name="greentea">녹차</span>
+  <span data-tea-name="corn">옥수수수염차</span>
+</body>
+</html>
