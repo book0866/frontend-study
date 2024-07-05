@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>priority</title>
+
+  <style>
+    /* 라이브러리에서 적용된 스타일을 커스텀하고자 한다면 최소한 동일한 우선 순위 점수 이상으로 지정 */
+
+    /* 우선 순위 점수가 낮은 것부터 실습 */
+    /* body(상속) X -> * 0점 -> 태그 1점 -> 클래스 10점 -> 아이디 100점 -> 인라인 1000점 -> !important ∞점 */
+
+    div {
+      /* ★이 스타일이 무조건 적용되어야 하거나 절대 변경되어서는 안 되는 경우에만 사용★ */
+      color: deeppink !important;
+    }
+
+    /* 인라인(태그에 직접 기입)
+    style="color: blueviolet;" */
+
+    #hello {
+      color: blue;
+    }
+
+    /* 점수가 같으면 가장 마지막에 해석된 스타일이 적용. 더 구체적인 지정 필요 */
+    div.hello {
+      color: skyblue;
+    }
+    
+    .hello {
+      color: greenyellow;
+    }
+
+    div {
+      color: rgb(255, 225, 54);
+    }
+
+    * {
+      color: orange;
+    }
+
+    body {
+      color: red;
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div
+    id="hello"
+    class="hello"
+    style="color: blueviolet;"
+    >
+    Hello, world!
+  </div>
+  
+</body>
+</html>
