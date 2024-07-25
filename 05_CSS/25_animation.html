@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation</title>
+
+  <!-- 구글 머티리얼 아이콘 -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <style>
+
+    .btn {
+      padding: 15px 20px;
+      font-size: 20px;
+      background-color: seagreen;
+      color: whitesmoke;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .btn-shake:hover {
+      /* animation-name: shake;
+      animation-duration: 1s; */
+      animation: shake 1s infinite;
+    }
+
+    /* CSS @keyframes Rule: 애니메이션 코드를 설정 */
+    @keyframes shake {
+      /* 셀렉터: 애니메이션이 진행되는 과정을 선택해서 지정
+                0~100%
+                from (0%와 동일)
+                to (100%와 동일) */
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-8deg); }
+      50% { transform: rotate(+8deg); }
+      75% { transform: rotate(-8deg); }
+      100% { transform: rotate(0deg); }
+    }
+
+    .btn-shake-hard:hover {
+      animation: shake-hard 0.4s infinite;
+    }
+    @keyframes shake-hard {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-2px, 0px) rotate(1deg); }
+      30% { transform: translate(2px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg); }
+      50% { transform: translate(-1px, 2px) rotate(-1deg); }
+      60% { transform: translate(-2px, 1px) rotate(0deg); }
+      70% { transform: translate(2px, 1px) rotate(-1deg); }
+      80% { transform: translate(-1px, -1px) rotate(1deg); }
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    .material-symbols-outlined {
+      font-size: 70px;
+      cursor: pointer;
+    }
+
+    .material-symbols-outlined:hover {
+      animation: turn 1s;
+      /* 애니메이션이 끝났을 때 상태 유지 */
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes turn {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(-15deg); }
+      100% { transform: rotate(180deg); }
+    }
+
+    .my-head-is-dramatic {
+      color: darkviolet;
+      animation: dramatic .5s infinite linear;
+    }
+
+    @keyframes dramatic {
+      100% { transform: rotate(360deg); }
+    }
+
+    .head {
+      font-size: 30px;
+      font-weight: 600;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+  </style>
+
+</head>
+<body>
+  
+  <h2>shake 애니메이션 만들기</h2>
+  <button type="button" class="btn btn-shake">덩실덩실</button>
+  <button type="button" class="btn btn-shake-hard">😱</button>
+
+  <h2>turn 애니메이션 만들기</h2>
+  <span class="material-symbols-outlined">star</span>
+
+  <!-- <h1 class="animate__animated animate__flip">An animated element</h1> -->
+  <h1 class="animate__animated animate__flip__delay-2s">An animated element</h1>
+  <h1 class="animate__animated animate__flip__faster">An animated element</h1>
+  <h1 class="animate__animated animate__flip__repeat-2s">An animated element</h1>
+
+  <span class="material-symbols-outlined my-head-is-dramatic">Cognition</span>
+  <br>
+  <span class="head">My Head Is Dramatic</span>
+
+
+</body>
+</html>

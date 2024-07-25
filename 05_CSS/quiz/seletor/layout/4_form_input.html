@@ -18,7 +18,7 @@
     }
 
     .text-input:focus {
-      border: 2px solid red;
+      border: 2px solid seagreen;
     }
 
     /* ----------------------------------------------- */
@@ -39,22 +39,31 @@
       cursor: pointer;
     }
 
+    h3 {
+      color: seagreen;
+      font-size: 25px;
+    }
+
     .form-background {
-      background-color: #333;
+      background-color: rgb(17, 85, 46);
       padding: 30px 0;
+      opacity: 0.9;
     }
 
     .form-container {
       /* 가로 길이는 80%를 차지하다가 600px에서 더 이상 늘어나지 않도록 제한 */
-      background-color: white;
+      background-color: rgb(236, 236, 236);
       width: 80%;
       max-width: 600px;
       padding: 40px 25px;
       margin: 0 auto;
+      border-radius: 0 20px;
+      box-shadow: 0 10px 5px rgb(6, 48, 24), 0 6px 6px;
     }
 
     #mail {
       width: 100%;
+      color: rgb(164, 187, 170);
     }
 
     .d-flex {
@@ -84,11 +93,20 @@
 
     button {
       border: none;
-      background-color: tomato;
-      color: white;
-      padding: 10px 30px;
+      background-color: seagreen;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: medium;
+      color: rgb(236, 236, 236);
+      padding: 10px 40px;
       border-radius: 5px;
+      transition: 0.5s;
     }
+
+    button:hover {
+      background-color: rgb(187, 187, 187);
+      color: rgb(28, 107, 62);
+    }
+
     .align-items-center { align-items: center; }
 
     .justify-content-between { 
@@ -160,7 +178,7 @@
           <p>
             <label for="message">Message</label>
           </p>
-          <input type="text" id="message" class="text-input">
+          <textarea id="message" class="text-input"></textarea>
           
           <div class="d-flex align-items-center justify-content-between margin-top">
             <div>
