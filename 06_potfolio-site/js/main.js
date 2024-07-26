@@ -12,6 +12,7 @@ spyEls.forEach(function(spyEl) {
 });
 
 
+
 // 모달창 띄우기
 let modalEl = document.querySelector('#modal');
 let modalBtn = document.querySelectorAll('.port .btn-modal');
@@ -27,4 +28,41 @@ modalBtn[0].addEventListener('click', function() {
 
 closeBtn.addEventListener('click', function() {
   modalEl.style.display = 'none';
+});
+
+
+
+// 현재 연도 표시
+// 날짜 정보를 가진 JS의 Date 객체 활용
+new Date().getFullYear; // 현재 연도 정보가 숫자 데이터로 반환됨
+console.log(new Date().getFullYear());
+
+let thisyear = document.querySelector('.this-year');
+thisyear.textContent = new Date().getFullYear();
+
+
+// 페이지 최상단으로 이동
+let toTopBtn = document.querySelector('#to-top');
+
+// 페이지에 스크롤 감지 이벤트 추가
+// window: 브라우저 창 객체
+window.addEventListener('scroll', function () {
+  // console.log(window.scrollY); // Y축 스크롤 위치
+
+  // 페이지 스크롤 위치가
+  // 500px을 넘으면 요소를 보이고,
+  // 500px을 넘지 않으면 요소 숨기기
+  if (window.scrollY > 500) {
+     // 요소 보이기
+    // toTopBtn.style.display = 'flex';
+    // 애니메이션 처리를 하고 싶다면 
+    toTopBtn.style.opacity = 1;
+    toTopBtn.style.transform = 'translateX(0)';
+  } else {
+    // 요소 숨기기
+    // toTopBtn.style.display = 'none';
+    // 애니메이션 처리를 하고 싶다면 
+    toTopBtn.style.opacity = 0;
+    toTopBtn.style.transform = 'translateX(100px)';
+  }
 });
