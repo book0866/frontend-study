@@ -1,0 +1,175 @@
+/* -------------COMMON(공통 속성)------------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* 스크롤 이동을 부드럽게 */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: whitesmoke;
+  background-color: burlywood; /* rgb(22, 70, 43) */
+  /* or background-img */
+  overflow-x: hidden;
+}
+
+/* 영문에만 적용할 폰트 */
+.font-en {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* 강제 상속 */
+}
+
+.inner {
+  /* 고정 길이=고정형 */
+  /* width: 1200px; */
+  /* 최대값만 제한=반응형 */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  /* 이미지가 인라인 요소라서 방생하는 문자 기준선(baseline) 아래의 공간을 제거하기 위해 */
+  display: block;
+}
+
+.title {
+  font-size: 50px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.title::after {
+  /* ::before ::after 쓸 때는 content 필수 작성 */
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background-color: gray;
+  margin: 24px auto 0;
+}
+
+.btn-group {
+  display: flex;
+  column-gap: 40px;
+}
+
+.btn {
+  width: 120px;
+  padding: 10px;
+  display: block; /* a, span 같은 인라인 요소를 버튼으로 사용할 수도 있으니 블록으로 지정 */
+  border: 2px solid gray;
+  color: goldenrod;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: goldenrod;
+  color: rgb(22, 70, 43);
+  border: 2px solid goldenrod;
+}
+
+/* ---------------------------------------------------------------------------------- */
+
+
+
+
+/* -------------HEADER------------- */
+header {
+  background-color: seagreen;
+  border-bottom: 2px solid goldenrod;
+  /* 고정된 헤더 만들기 */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+
+header > .inner {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header > .inner div {
+  width: 200px;
+  height: 80%;
+  border: 5px solid goldenrod;
+  background-color: whitesmoke;
+  border-radius: 30px;
+}
+
+header div .logo img {
+  /* 가로 너비만 지정하면 세로 높이는 비율에 맞춰 정해짐 */
+  width: 80px;
+  margin: 0 auto;
+}
+
+header nav ul li {
+  padding: 10px 20px;
+  font-weight: 700;
+}
+
+header nav ul li a:hover {
+  color: goldenrod;
+  /* text-shadow: 1px 1px 5px grey; */
+  /* box-shadow: ; */
+}
+
+
+
+/* -------------MENU------------- */
+section.menu {
+  position: fixed;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.menu div {
+  display: flex;
+}
+
+.menu div nav div div.menu-odd {
+  width: 70px;
+  height: 130px;
+  background-color: seagreen;
+  border-radius: 30px;
+  color: whitesmoke;
+  font-weight: 400;
+}
+
+.menu div nav div div.menu-even {
+  width: 70px;
+  height: 130px;
+  background-color: whitesmoke;
+  border-radius: 30px;
+  color: seagreen;
+  font-weight: 400;
+}
+
+.menu div nav div div a.about, .menu div nav div div a.skill, .menu div nav div div a.work, .menu div nav div div a.contact:hover {
+  cursor: pointer;
+  transition: 0.3s;
+  transform: translateY(-50px);
+}
+
+
+
+
+
