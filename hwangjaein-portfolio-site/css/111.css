@@ -14,7 +14,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: whitesmoke;
-  background-color: burlywood; /* rgb(22, 70, 43) */
+  background-color: burlywood;
   /* or background-img */
   overflow-x: hidden;
 }

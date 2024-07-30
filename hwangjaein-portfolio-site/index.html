@@ -34,7 +34,7 @@
 <!-- ScrollMagic -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script defer src=""></script>
+<script defer src="../06_portfolio-site/js/main.js"></script>
 
 
 </head>
@@ -42,12 +42,64 @@
 
   <!-- HEADER -->
   <header>
-    <div class="inner">
-        <div>
-        <!-- 로고 -->
-        <a href="index.html" class="logo">
-          <img src="image/로고-.png" alt="로고-가로">
-        </a>
+    <div>
+      <div class="bg-seagreen">
+        <div class="nav-top">
+          <!-- 로고 -->
+          <a href="index.html" class="logo">
+            <img src="image/로고-.png" alt="로고-가로">
+          </a>
+        </div>
+      </div>
+      <ul class="nav-menu">
+        <li class="menu-odd menu-about">
+          <a href="#about">ABOUT</a>
+        </li>
+        <li class="menu-even menu-skill">
+          <a href="#skill">SKILL</a>
+        </li>
+        <li class="menu-odd menu-work">
+          <a href="#work">WORK</a>
+        </li>
+        <li class="menu-even menu-contact">
+          <a href="#contact">CONTACT</a>
+        </li>
+      </ul>
+      <div class="nav-background">
+        <!-- 메뉴 뒷배경 -->
+        <div class="menu-flex">
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+        </div>
+
+        <div class="menu-flex">
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+          <div class="menu-odd"></div>
+          <div class="menu-even"></div>
+        </div>
       </div>
     </div>
   </header>
@@ -55,54 +107,31 @@
 
 
 
-<!-- MENU -->
-<section class="menu">
-  <div>
+  <!-- MENU -->
 
-    <!-- 메뉴 -->
-    <nav class="font-en">
-      <div>
-        <!-- 본인의 메뉴 구조에 맞게 변경 -->
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
-        <div class="menu-odd">
-          <a href="#about" class="menu-about">ABOUT</a>
-        </div>
-        <div class="menu-even">
-          <a href="#skill" class="menu-skill">SKILL</a>
-        </div>
-        <div class="menu-odd">
-          <a href="#work" class="menu-work">WORK</a>
-        </div>
-        <div class="menu-even">
-          <a href="#contact" class="menu-contact">CONTACT</a>
-        </div>
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
-      </div>
-    </nav>
+
+
+
+
+
+  <!-- HOME -->
+  <section class="home">
+    <div class="home-bg">
+      <img src="image/배경1.png" alt="홈배경">
+    </div>
+  </section>
+
+
+
+
+  <!-- MODAL -->
+  <div id="modal">
+    <div class="modal__inner">
+      <img src="images/work_4.jpg" alt="샘플">
+      <span class="material-symbols-outlined btn-close">close</span>
+    </div>
   </div>
-</section>
+
 
 
 
@@ -119,12 +148,12 @@
         <div class="about__text">
           <!-- 본인 슬로건, 이름(생년월 등), 교육 사항 등 작성 -->
           <strong class="slogan font-en">Simple is Best</strong>
-          <h3 class="font-en">Rubber Duck</h3>
+          <h3 class="font-en">Hwang Jaein</h3>
           <div>
             <h4 class="font-en">EDUCATION</h4>
             <ul>
               <li>10.03 ~ 12.02 ㅇㅇ학교 ㅇㅇ과 졸업</li>
-              <li>23.12 ~ 24.05 풀스텍 개발자 과정 수료</li>
+              <li>24.06 ~ 24.12 풀스텍 개발자 과정 수료</li>
             </ul>
           </div>
         </div>
@@ -139,11 +168,15 @@
   </section>
 
 
+
+
+
   <!-- SKILL -->
   <section id="skill" class="skill scroll-spy">
     <div class="inner">
       <h2 class="title font-en">SKILL</h2>
-      <ul class="skill__list">
+      <ul class="skill__list"    >
+
         <!-- 스킬 추가하려면 li 부분 복사 -->
         <li>
           <div class="font-en">
@@ -209,7 +242,8 @@
     </div>
   </section>
 
-  
+
+
   <!-- WORK -->
   <section id="work" class="work font-en">
     <div class="inner">
@@ -309,6 +343,12 @@
   </div>
 
 
+
+
+
+
+
+
   <!-- SCROLL TO TOP -->
   <div id="to-top">
     <a href="#">
@@ -319,3 +359,6 @@
 
 </body>
 </html>
+
+
+
