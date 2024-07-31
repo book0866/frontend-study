@@ -34,17 +34,20 @@
 <!-- ScrollMagic -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script defer src="../06_portfolio-site/js/main.js"></script>
+<!-- 애니메이션 효과 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<script defer src="js/main.js"></script>
 
 
 </head>
 <body>
 
   <!-- HEADER -->
-  <header>
+  <header class="animate__animated animate__bounce">
       <div class="bg-seagreen">
         <div class="nav-top">
-          <!-- 로고 -->
+        
           <a href="index.html" class="logo">
             <img src="image/로고-.png" alt="로고-가로">
           </a>
@@ -53,29 +56,11 @@
   </header>
 
 
-
-
   <!-- MENU -->
   <div>
-    <ul class="nav-menu">
-      <li class="menu-odd menu-about">
-        <a href="#about">ABOUT</a>
-      </li>
-      <li class="menu-even menu-skill">
-        <a href="#skill">SKILL</a>
-      </li>
-      <li class="menu-odd menu-work">
-        <a href="#work">WORK</a>
-      </li>
-      <li class="menu-even menu-contact">
-        <a href="#contact">CONTACT</a>
-      </li>
-    </ul>
     <div class="nav-background">
     <!-- 메뉴 뒷배경 -->
-      <div class="menu-flex">
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
+      <div class="menu-flex animate__animated animate__bounce">
         <div class="menu-odd"></div>
         <div class="menu-even"></div>
         <div class="menu-odd"></div>
@@ -89,8 +74,19 @@
         <div class="menu-odd"></div>
         <div class="menu-even"></div>
 
-        <div class="menu-odd"></div>
-        <div class="menu-even"></div>
+        <div class="menu-odd menu-odd-hover">
+          <a href="#about" class="about">ABOUT</a>
+        </div>
+        <div class="menu-even menu-even-hover">
+          <a href="#skill" class="skill">SKILL</a>
+        </div>
+        <div class="menu-odd menu-odd-hover">
+          <a href="#work" class="work">WORK</a>
+        </div>
+        <div class="menu-even menu-even-hover">
+          <a href="#contact" class="contact">CONTACT</a>
+        </div>
+
         <div class="menu-odd"></div>
         <div class="menu-even"></div>
         <div class="menu-odd"></div>
@@ -108,44 +104,61 @@
   </div>
 
 
+<!-- VISUAL -->
+<section class="visual">
+  <video autoplay muted loop>
+    <source src="image/Deep Blue Sky - Clouds Timelapse - Free Footage - Full HD 1080p.mp4" type="Sky/mp4">
+  </video>
+</section>
 
 
 
   <!-- HOME -->
-  <section class="home">
-    </div>
-      <div class="curtain">
-        <img src="image/커튼-왼.png" alt="커튼-왼" class="curtain-left">
-        <img src="image/커튼-오.png" alt="커튼-오" class="curtain-right">
-      </div>
-      <div class="home-bg"></div>
-    </section>
-  
-
-
+  <div class="paper-airplane">
+    <img src="image/종이비행기.png" alt="종이비행기" href="javascript:void(0)" class="btn btn-modal">
+  </div>
 
 
   <!-- MODAL -->
-  <div id="modal">
-    <div class="modal__inner">
-      <img src="images/work_4.jpg" alt="샘플">
+  <div id="welcome" class="welcome">
+    <div class="welcome-content">
+      <h1>WELCOME!</h1>
+      <h2>첫 번째 포트폴리오 작업물입니다.</h2>
+      <br>
+      <p>아직 채워넣을 이력이 마땅칠 않네요.</p>
+      <p>수료 기간을 거치면서 천천히<br>채워보도록 하겠습니다.</p>
+      <p>감사합니다.</p>
+      <p>:D</p>
       <span class="material-symbols-outlined btn-close">close</span>
     </div>
   </div>
 
 
+  <section class="home">
+      
+      <div class="curtain">
+        <div>
+            <img src="image/커튼-왼.png" alt="커튼-왼" class="curtain-left">
+            <img src="image/커튼-오.png" alt="커튼-오" class="curtain-right">
+          </div>
+      </div>
 
+      <div class="window">
+        <img src="image/창문.png" alt="창문">
+      </div>
+      
+      <div class="sky">
+        <video autoplay muted loop>
+          <source src="image/Deep Blue Sky - Clouds Timelapse - Free Footage - Full HD 1080p.mp4" type="video/mp4">
+        </video>
+    </div>
+    </section>
 
 
   <!-- ABOUT -->
-  <section id="about" class="about">
+  <section id="about" class="about title-align align">
     <div class="inner">
-      <h2 class="title font-en">ABOUT</h2>
-      <div class="about__wrapper">
-        <div class="about__img">
-          <!-- 본인 프로필 이미지로 변경 -->
-          <img src="roverduck/roverduck.png" alt="프로필">
-        </div>
+      <h2 class="title title-after font-en"><a class="green">A</a>BOUT</h2>
         <div class="about__text">
           <!-- 본인 슬로건, 이름(생년월 등), 교육 사항 등 작성 -->
           <strong class="slogan font-en">Simple is Best</strong>
@@ -153,8 +166,14 @@
           <div>
             <h4 class="font-en">EDUCATION</h4>
             <ul>
-              <li>10.03 ~ 12.02 ㅇㅇ학교 ㅇㅇ과 졸업</li>
-              <li>24.06 ~ 24.12 풀스텍 개발자 과정 수료</li>
+              <li>
+                <p>13.03 ~ 15.02</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ㅇㅊㅈㄴㄷ학교 주얼리금속디자인과 졸업</p>
+              </li>
+              <li>
+                <p>24.06 ~ 24.12</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;풀스텍 개발자 과정 수료</p>
+              </li>
             </ul>
           </div>
         </div>
@@ -173,10 +192,10 @@
 
 
   <!-- SKILL -->
-  <section id="skill" class="skill scroll-spy">
+  <section id="skill" class="skill scroll-spy align reverse">
     <div class="inner">
-      <h2 class="title font-en">SKILL</h2>
-      <ul class="skill__list"    >
+      <h2 class="title title-before font-en"><a class="green">S</a>KILL</h2>
+      <ul class="skill__list">
 
         <!-- 스킬 추가하려면 li 부분 복사 -->
         <li>
@@ -246,43 +265,36 @@
 
 
   <!-- WORK -->
-  <section id="work" class="work font-en">
+  <section id="work" class="work font-en align">
     <div class="inner">
-      <h2 class="title">WORK</h2>
+      <h2 class="title title-after"><a class="green">W</a>ORK</h2>
       <div class="port">
         <div class="port__img">
-          <img src="images/work_1.jpg" alt="포트폴리오1">
+          <img src="image/책1.png" alt="포트폴리오1">
         </div>
         <div class="port__text">
-          <h3>프로젝트명</h3>
+          <h3>Backend-study</h3>
           <ul>
             <li><span>주요 기능 : </span>주요 기능 설명</li>
             <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
-            <li><span>GitHub : </span>깃허브 주소</li>
-            <li><span>URL : </span>배포 주소</li>
           </ul>
           <div class="btn-group">
-            <a href="http://gonikim.dothome.co.kr/pdf/Part1.pdf" target="_blank" class="btn">README</a>
-            <a href="javascript:void(0)" class="btn btn-modal">모달</a>
+            <a href="https://github.com/book0866/Project1" target="_blank" class="btn">github</a>
           </div>
         </div>
       </div>
 
       <div class="port">
         <div class="port__img">
-          <img src="images/work_2.jpg" alt="포트폴리오2">
+          <img src="image/책2.png" alt="포트폴리오2">
         </div>
         <div class="port__text">
-          <h3>프로젝트명</h3>
+          <h3>Frontend-study</h3>
           <ul>
             <li><span>주요 기능 : </span>주요 기능 설명</li>
             <li><span>적용 기술 : </span>HTML, CSS, JS, React, Java, Spring Boot</li>
-            <li><span>GitHub : </span>깃허브 주소</li>
-            <li><span>URL : </span>배포 주소</li>
-          </ul>
           <div class="btn-group">
-            <a href="http://gonikim.dothome.co.kr/pdf/Part1.pdf" target="_blank" class="btn">README</a>
-            <a href="javascript:void(0)" class="btn btn-modal">모달</a>
+            <a href="https://github.com/book0866/frontend-study" target="_blank" class="btn">github</a>
           </div>
         </div>
       </div>
@@ -295,25 +307,29 @@
 
   <!-- CONTACT -->
   <section id="contact" class="contact font-en scroll-spy">
-    <div class="inner">
-      <h2 class="title">CONTACT</h2>
+    <div class="align">
+      <h2 class="contact-align"><a class="green">C</a>ONTACT</h2>
       <div class="contact__info">
         <ul>
-          <li><a href="https://github.com/book0866/frontend-study">GitHub</a></li>
-          <li>000-1234-5678</li>
+          <li>
+            <a href="https://github.com/book0866" target="_blank">
+              <img src="image/깃허브.png" alt="깃허브">
+            </a>
+          </li>
+          <li>010-4057-6956</li>
           <li>wodls66@naver.com</li>
         </ul>
       </div>
       <div class="contact__sns">
         <ul>
           <li>
-            <a href="인스타그램 주소" target="_blank">
-              <img src="images/icon/icon_insta.png" alt="인스타그램">
+            <a href="http://twitter.com">
+              <img src="image/트위터.png" alt="트위터">
             </a>
           </li>
           <li>
-            <a href="유튜브 주소" target="_blank">
-              <img src="images/icon/icon_youtube.png" alt="유튜브">
+            <a href="http://www.youtube.com">
+              <img src="image/유튜브.png" alt="유튜브">
             </a>
           </li>
         </ul>
@@ -325,10 +341,10 @@
 
   <!-- FOOTER -->
   <footer>
-    <div class="inner">
+    <div class="align">
       <p class="copyright">
         &copy; <span class="this-year"></span>
-        훈련생 이름. <span class="font-en">All Right Reserved.</span>
+        훈련생 황재인. <span class="font-en">All Right Reserved.</span>
       </p>
     </div>
   </footer>
@@ -345,11 +361,6 @@
 
 
 
-
-
-
-
-
   <!-- SCROLL TO TOP -->
   <div id="to-top">
     <a href="#">
@@ -360,6 +371,3 @@
 
 </body>
 </html>
-
-
-

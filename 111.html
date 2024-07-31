@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Overflow Example</title>
+    <style>
+        body {
+            margin: 0; /* 기본 마진 제거 */
+            overflow-x: hidden; /* 수평 스크롤 제거 */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center; /* 자식 요소 중앙 정렬 */
+            overflow-x: visible; /* 자식 요소가 컨테이너의 크기를 넘어서도록 허용 */
+            padding: 0; /* 패딩 제거 */
+            margin: 0; /* 마진 제거 */
+        }
+
+        .block {
+            flex: 0 0 120%; /* 블록 요소의 너비를 컨테이너의 120%로 설정 */
+            background-color: #4CAF50; /* 배경 색상 */
+            color: white; /* 텍스트 색상 */
+            text-align: center; /* 텍스트 중앙 정렬 */
+            padding: 20px; /* 패딩 추가 */
+            box-sizing: border-box; /* 패딩과 경계선을 포함하여 너비를 계산 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block">Overflowing Block Element</div>
+    </div>
+</body>
+</html>
