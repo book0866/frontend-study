@@ -280,7 +280,7 @@ header div .logo img {
 }
 
 @keyframes shoong {
-  0% { transform: 0;}
+  0% { transform: translateX(0)}
   100% {transform: translate(-1000px, -1000px)}
 }
 
