@@ -11,25 +11,27 @@ spyEls.forEach(function(spyEl) {
   .addTo (new ScrollMagic.Controller());
 });
 
-
-
 // 종이비행기 모달창
 let modalPaper = document.querySelector('#welcome');
 let modalBtn = document.querySelectorAll('.paper-airplane .btn-modal');
 let closeBtn = document.querySelector('#welcome .btn-close');
+let airplaneEl = document.querySelector('.paper-airplane');
 console.log(modalBtn);
 console.log(modalBtn[0]);
 console.log(modalBtn[1]);
 
 modalBtn[0].addEventListener('click', function() {
-  modalPaper.style.display = 'flex';
+  modalPaper.style.opacity = '1';
+  modalPaper.style.visibility = 'visible';
+
+  airplaneEl.classList.add('shoong');
 });
 
 closeBtn.addEventListener('click', function() {
-  modalPaper.style.display = 'none';
+  modalPaper.style.opacity = '0';
+  modalPaper.style.visibility = 'hidden';
+  airplaneEl.classList.remove('shoong');
 });
-
-
 
 // 현재 연도 표시
 // 날짜 정보를 가진 JS의 Date 객체 활용
