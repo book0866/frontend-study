@@ -291,9 +291,6 @@ header div .logo img {
 
 
 
-
-
-
 /* -------------MODAL------------- */
 #welcome {
   position: absolute;
@@ -356,8 +353,6 @@ header div .logo img {
 
 
 /* -------------HOME------------- */
-
-
 .home {
   /* (중요)
       헤더가 fixed 되어 일반 배치 흐름에서 벗어남
@@ -471,8 +466,6 @@ header div .logo img {
 
 
 
-
-
 /* -------------SKILL------------- */
 .skill {
   padding-top: 200px;
@@ -550,9 +543,6 @@ header div .logo img {
 
 
 
-
-
-
 /* -------------WORK------------- */
 .work {
   padding-top: 200px;
@@ -600,8 +590,6 @@ header div .logo img {
 .work .port .port__text li span {
   font-weight: 700;
 }
-
-
 
 
 
@@ -723,7 +711,4 @@ footer .footer {
   opacity: 0;
   transform: translateX(100px);
 }
-
-
-
 
