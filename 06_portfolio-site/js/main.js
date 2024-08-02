@@ -66,3 +66,36 @@ window.addEventListener('scroll', function () {
     toTopBtn.style.transform = 'translateX(100px)';
   }
 });
+
+
+// 모바일용 메뉴
+let btnHamburger = document.querySelector('.btn-hamburger');
+let navEl = document.querySelector('header nav');
+
+let menuItems = document.querySelectorAll('header nav ul li a');
+console.log(menuItems);
+
+btnHamburger.addEventListener('click', function () { // ('이벤트종류', 함수);
+  // JS로 클래스를 제어하는 메소드
+  // add() / remove() / toggle() / contains()
+
+  // if (navEl.classList.contains('active')) {
+  //   navEl.classList.remove('active');
+  // } else {
+  //   navEl.classList.add('active');
+  // }
+
+  // 위와 같은 코드를 toggle()로 간략화 하기
+  navEl.classList.toggle('active');
+
+});
+
+// 메뉴를 클릭했을 때 스크롤 이동과 동시에 메뉴 숨기기
+// JS는 함수의 인자값으로 함수를 넣는 것이 가능함
+// 인자값으로 쓰인 함수 이름은 마음대로 짓기
+menuItems.forEach(function (menuItem) {
+  menuItem.addEventListener('click', function () {
+    navEl.classList.remove('active');
+  });
+});
+
