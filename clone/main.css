@@ -1,0 +1,119 @@
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+/* ------------------------------------------------- */
+
+
+.wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin: 0 auto;
+}
+
+.video-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pc_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-box {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-box .pc_img {
+  width: 100%;
+  height: 100%;
+  animation: sizeUp 1s;
+}
+
+.text-box {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-box > p {
+  font-size: 1.5vw;
+  color: white;
+  font-weight: 200;
+  text-align: center;
+  opacity: 0;
+  animation: downToUp 1s 1s;
+  animation-fill-mode: forwards;
+  margin-top: 50px;
+}
+
+.text-box strong {
+  font-size: 1.5vw;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+  opacity: 0;
+  animation: downToUp 1s 1s;
+  animation-fill-mode: forwards;
+  margin-top: 50px;
+}
+
+.text-box > span {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: white;
+  border: none;
+  transition: 0.3s;
+  font-size: 20px;
+  font-weight: 700;
+  color: goldenrod;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: leftSide 1s 1.5s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  margin-top: 50px;
+}
+
+.text-box > span:hover {
+  width: 60px;
+  height: 60px;
+  font-size: 25px;
+}
+
+@keyframes downToUp {
+  0% {transform: translateY(50px);}
+  100% {transform: translateY(0px); opacity: 1;}
+}
+
+@keyframes leftSide {
+  0% {transform: translateX(50px);}
+  100% {transform: translateX(0); opacity: 1;}
+}
+
+@keyframes sizeUp { /* 두 개 이상의 속성을 적용할 때 콤마(,) 안 써도 됨 */
+  0% {transform: scale(0);}
+  100% {transform: scale(1) rotate(360deg);}
+}
+
+
+
+
